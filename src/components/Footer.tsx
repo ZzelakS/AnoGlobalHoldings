@@ -6,7 +6,7 @@ import { BUILT_BY, COMPANIES, NAV, SITE, whatsappHref } from '@/config/site'
 export default function Footer() {
   return (
     <footer className="band relative z-[2]">
-      <div className="container-outer py-24">
+      <div className="container-outer pb-10 pt-24">
         <div className="content">
           {/* the wordmark runs large here, as a sign-off */}
           <Image

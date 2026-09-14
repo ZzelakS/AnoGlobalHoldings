@@ -62,7 +62,7 @@ export default function OurCompaniesPage() {
                 ))}
               </div>
               <div className="mt-major">
-                <Btn href={COMPANIES.foundation.href} accent="gold" variant="outline" external>
+                <Btn href={COMPANIES.foundation.href} accent="gold" external>
                   {COMPANIES.foundation.cta}
                 </Btn>
               </div>

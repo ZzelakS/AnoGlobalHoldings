@@ -35,7 +35,7 @@ export default function ContactPage() {
               </div>
             </Reveal>
             <Reveal delay={0.1} className="mt-major">
-              <Figure slot={IMAGES.contact} ratio="aspect-[21/9]" priority />
+              <Figure slot={IMAGES.contact} ratio="aspect-[4/6] lg:aspect-[1/1]" sizes="(max-width: 1024px) 100vw, 640px" />
             </Reveal>
           </div>
         </div>

@@ -171,7 +171,7 @@ export default function HomePage() {
                   <h2 className="mt-8 text-h2">{HOME.founderName}</h2>
                   <p className="measure mt-6 text-lead">{HOME.founderLine}</p>
                   <div className="mt-8">
-                    <Btn href="/leadership" variant="outline">{HOME.founderCta}</Btn>
+                    <Btn href="/leadership" accent='gold'>{HOME.founderCta}</Btn>
                   </div>
                 </div>
               </div>
@@ -197,7 +197,7 @@ export default function HomePage() {
               <p className="caption mt-6 text-gold">{SITE.locations}</p>
             </Reveal>
             <Reveal delay={0.1} className="mt-major">
-              <Figure slot={IMAGES.contact} ratio="aspect-[21/9]" />
+              <Figure slot={IMAGES.contact} ratio="aspect-[4/6] lg:aspect-[1/1]" sizes="(max-width: 1024px) 100vw, 640px" />
             </Reveal>
           </div>
         </div>
