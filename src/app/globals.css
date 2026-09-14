@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Typography returns to the earlier system:
+  Archivo run expanded for display, Instrument Sans for body, IBM Plex Mono for
+  labels and small caps.
+*/
+:root {
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-body: 'Instrument Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* LIGHT — warm parchment, deliberately not white */
+  --bg: 239 235 225;
+  --surface: 232 227 214;
+  --raised: 226 220 205;
+  --line: 209 201 183;
+  --line-hi: 184 173 150;
+  --text: 42 46 41;
+  --heading: 27 67 50;
+  --muted: 92 96 89;
+  --muted-2: 128 130 120;
+  /* gold at full strength fails contrast on parchment, so text-weight gold is
+     darkened in light mode. Decorative gold rules and fills stay as-is. */
+  --accent-text: 124 88 26;
+}
+
+.dark {
+  /* DARK — deep forest black, gold carries the light */
+  --bg: 12 18 15;
+  --surface: 18 27 22;
+  --raised: 24 36 29;
+  --line: 39 54 45;
+  --line-hi: 60 82 68;
+  --text: 220 216 204;
+  --heading: 240 236 226;
+  --muted: 155 160 150;
+  --muted-2: 116 122 112;
+  --accent-text: 217 169 78;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg font-sans text-body text-body antialiased;
+    transition: background-color 300ms ease, color 300ms ease;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display text-heading;
+    font-weight: 700;
+    font-stretch: 112%;
+    letter-spacing: -0.015em;
+  }
+
+  ::selection {
+    background: rgba(184, 137, 59, 0.3);
+  }
+
+  :focus-visible {
+    outline: 2px solid #b8893b;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .container-outer {
+    @apply relative z-[2] mx-auto w-full max-w-container;
+    padding-inline: theme('spacing.gutter');
+  }
+  .content {
+    @apply mx-auto w-full max-w-content;
+  }
+  .measure {
+    @apply max-w-measure;
+  }
+  .section {
+    padding-block: theme('spacing.section');
+  }
+
+  /* the measure is capped in ch, so on a narrow screen it is the padding that
+     does the work; loosen line length and lift leading a little on mobile */
+  @media (max-width: 640px) {
+    .measure {
+      max-width: 100%;
+    }
+    p {
+      line-height: 1.7;
+    }
+  }
+
+  /* small caps label — mono, gold */
+  .caption {
+    @apply font-mono text-caption uppercase;
+    color: rgb(var(--accent-text));
+  }
+
+  .display-xl {
+    @apply font-display;
+    font-weight: 700;
+    font-stretch: 106%;
+    letter-spacing: -0.025em;
+  }
+
+  /*
+    Deep forest band, dark in BOTH themes. Because it does not follow the
+    theme, it has to pin the themed tokens locally — otherwise every themed
+    utility inside it (buttons, rules, muted text, glass) flips to the light
+    palette and goes dark-on-dark.
+  */
+  .band {
+    --surface: 18 27 22;
+    --raised: 24 36 29;
+    --line: 45 62 52;
+    --line-hi: 72 96 80;
+    --text: 220 216 204;
+    --heading: 240 236 226;
+    --muted: 176 180 170;
+    --muted-2: 140 146 136;
+    --accent-text: 217 169 78;
+    background-color: #10201a;
+    color: rgb(var(--text));
+  }
+  .dark .band {
+    background-color: #0a120e;
+  }
+  .band h1,
+  .band h2,
+  .band h3 {
+    color: #f0ece2;
+  }
+
+  /* a hairline rule in gold */
+  .rule-gold {
+    @apply block h-px w-16 origin-left bg-gold;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
