@@ -22,7 +22,7 @@ export default function SpeakingPage() {
               <p className="measure mt-major text-lead">{SPEAKING.lede}</p>
             </Reveal>
             <Reveal delay={0.1} className="mt-major">
-              <Figure slot={IMAGES.speaking} ratio="aspect-[21/9]" priority />
+              <Figure slot={IMAGES.speaking} ratio="aspect-[3/2]" sizes="(max-width: 1024px) 100vw, 640px" />
             </Reveal>
           </div>
         </div>
@@ -56,9 +56,21 @@ export default function SpeakingPage() {
               <p className="measure mt-8 text-lead text-[#DCD8CC]">{SPEAKING.platforms}</p>
               <p className="measure mt-8 text-body text-[#DCD8CC]">{SPEAKING.audiences}</p>
               <div className="mt-major grid gap-6 sm:grid-cols-3">
-                <Figure slot={IMAGES.geneva} ratio="aspect-[3/2]" sizes="(max-width: 640px) 100vw, 340px" />
-                <Figure slot={IMAGES.kigali} ratio="aspect-[3/2]" sizes="(max-width: 640px) 100vw, 340px" />
-                <Figure slot={IMAGES.abuja} ratio="aspect-[3/2]" sizes="(max-width: 640px) 100vw, 340px" />
+                <Figure
+                  slot={IMAGES.geneva}
+                  ratio="aspect-[4/5] sm:aspect-[16/9] lg:aspect-[4/4]"
+                  sizes="(max-width: 640px) 100vw, 340px"
+                />
+                <Figure
+                  slot={IMAGES.kigali}
+                  ratio="aspect-[4/5] sm:aspect-[16/9] lg:aspect-[4/4]"
+                  sizes="(max-width: 640px) 100vw, 340px"
+                />
+                <Figure
+                  slot={IMAGES.abuja}
+                  ratio="aspect-[16/9] lg:aspect-[4/3]"
+                  sizes="(max-width: 640px) 100vw, 340px"
+                />
               </div>
               <div className="mt-major">
                 <Btn href="/contact?enquiry=Speaking" accent="gold">
@@ -72,3 +84,4 @@ export default function SpeakingPage() {
     </>
   )
 }
+

@@ -21,7 +21,7 @@ export default function AboutPage() {
               <h1 className="max-w-[16ch] text-h1">{ABOUT.title}</h1>
             </Reveal>
             <Reveal delay={0.1} className="mt-major">
-              <Figure slot={IMAGES.premise} ratio="aspect-[21/9]" priority />
+              <Figure slot={IMAGES.premise} ratio="aspect-[3/2]" sizes="(max-width: 1024px) 100vw, 640px" />
             </Reveal>
           </div>
         </div>

@@ -67,8 +67,13 @@ export default function LeadershipPage() {
                     <li>
                       <Figure
                         slot={[IMAGES.geneva, IMAGES.kigali, IMAGES.abuja][i]}
-                        ratio="aspect-[3/2]"
-                        sizes="(max-width: 768px) 100vw, 380px"
+                        ratio={
+                          i === 2
+                            ? 'aspect-[16/9] lg:aspect-[4/3]'
+                            : 'aspect-[4/5] sm:aspect-[16/9] lg:aspect-[4/4]'
+                        }
+                        priority
+                        sizes="(max-width: 640px) 100vw, 1200px"
                       />
                       <p className="mt-7 text-body text-[#DCD8CC]">{item}</p>
                     </li>
@@ -93,7 +98,7 @@ export default function LeadershipPage() {
               <Rule />
               <h2 className="mt-8 text-h2">{LEADERSHIP.speakingHeading}</h2>
               <p className="measure mt-6 text-body">{LEADERSHIP.speaking}</p>
-              <Figure slot={IMAGES.speaking} ratio="aspect-[21/9]" className="mt-major" />
+              <Figure slot={IMAGES.speaking} ratio="aspect-[3/2]" sizes="(max-width: 1024px) 100vw, 640px" />
               <div className="mt-8">
                 <Btn href="/contact?enquiry=Speaking" accent="gold">
                   {LEADERSHIP.speakingCta}
