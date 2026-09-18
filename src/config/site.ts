@@ -104,15 +104,6 @@ export const LAGOS_GALLERY: ImageSlot[] = [
     caption: 'Opening night — Rucker Park Africa, Lagos',
   },
   {
-    src: '/images/sponsor.jpeg',
-    alt: 'Ano Energy premier division sponsorship, Lagos',
-    w: 2000,
-    h: 1125,
-    // placeholder: true,
-    needs: 'Ano Energy branding at the premier division court, Lagos. 16:9.',
-    caption: 'Ano Energy — premier division sponsor',
-  },
-  {
     src: '/images/rucker7.jpg',
     alt: 'Anosike Cares Foundation youth programming on site, Lagos',
     w: 2000,

@@ -86,7 +86,7 @@ export default function HomePage() {
             <div className="py-7"><h2 className="text-h2">Construction &amp; Building Systems</h2><p className="mt-3 text-body">{HOME.constructionCard}</p><p className="caption mt-5">Operating</p></div>
             <div className="py-7"><h2 className="text-h2">Anosike Cares Foundation</h2><p className="mt-3 text-body">{HOME.foundationCard}</p></div>
           </div>
-          <div className="mt-8 flex flex-wrap gap-4"><Btn href="/what-we-do" accent="gold">What we do</Btn><Btn href="/structure" accent="gold" variant="outline">Group structure</Btn></div>
+          <div className="mt-8 flex flex-wrap gap-4"><Btn href="/what-we-do" accent="gold">What we do</Btn><Btn href="/structure" accent="gold">Group structure</Btn></div>
         </div></div>
       </section>
 
