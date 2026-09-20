@@ -191,28 +191,27 @@ export default function LeadershipPage() {
               </ul>
 
               {/* Geneva address video */}
-              {GENEVA_VIMEO_ID !== 'YOUR_VIMEO_ID' && (
-                <div className="mt-major">
-                  <div className="relative aspect-video overflow-hidden rounded-md ring-1 ring-gold/20">
-                    <iframe
-                      src={`https://player.vimeo.com/video/${GENEVA_VIMEO_ID}`}
-                      title="Geneva address — United Nations headquarters"
-                      className="absolute inset-0 h-full w-full"
-                      allow="autoplay; fullscreen; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
-
-                  <p className="caption mt-4">
-                    Geneva address — United Nations headquarters
-                  </p>
+              <div className="mt-major">
+                <div className="relative aspect-video overflow-hidden rounded-md ring-1 ring-gold/20">
+                  <iframe
+                    src={`https://player.vimeo.com/video/${GENEVA_VIMEO_ID}`}
+                    title="Geneva address — United Nations headquarters"
+                    className="absolute inset-0 h-full w-full"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                  />
                 </div>
-              )}
+
+                <p className="caption mt-4">
+                  Geneva address — United Nations headquarters
+                </p>
+              </div>
             </Reveal>
           </div>
         </div>
       </section>
 
+      {/* Built in market */}
       <section className="bg-surface section">
         <div className="container-outer">
           <div className="content">
@@ -263,6 +262,7 @@ export default function LeadershipPage() {
         </div>
       </section>
 
+      {/* Speaking */}
       <section className="bg-bg section">
         <div className="container-outer">
           <div className="content">
