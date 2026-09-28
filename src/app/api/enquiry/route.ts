@@ -14,7 +14,7 @@ const ALLOWED = [
   'Other',
 ] as const
 
-const TO_EMAIL = 'contact@anoglobalholdings.com'
+const TO_EMAIL = 'info@anoglobalholdings.com'
 
 export async function POST(request: Request) {
   try {
@@ -49,7 +49,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           message:
-            'The enquiry service is not configured yet. Please email contact@anoglobalholdings.com directly.',
+            'The enquiry service is not configured yet. Please email info@anoglobalholdings.com directly.',
         },
         { status: 503 },
       )
@@ -91,7 +91,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           message:
-            'We could not send your enquiry. Please try again or email contact@anoglobalholdings.com.',
+            'We could not send your enquiry. Please try again or email info@anoglobalholdings.com.',
         },
         { status: 502 },
       )
@@ -115,7 +115,7 @@ export async function POST(request: Request) {
             `Enquiry type: ${enquiryType}`,
             '',
             'Ano Global Holdings',
-            'contact@anoglobalholdings.com',
+            'info@anoglobalholdings.com',
           ].join('\n'),
         }),
       },
@@ -139,7 +139,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         message:
-          'Unable to send your enquiry. Please try again or email contact@anoglobalholdings.com.',
+          'Unable to send your enquiry. Please try again or email info@anoglobalholdings.com.',
       },
       { status: 500 },
     )
