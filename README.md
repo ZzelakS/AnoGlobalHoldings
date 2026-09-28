@@ -148,7 +148,7 @@ plain typographic section is used rather than stock or a placeholder.
   Enquiry type · Message) so nothing is silently swallowed, and tells the visitor
   it opens their mail app. Connect Formspree, Resend, or a route handler before
   launch — see the comment at the top of that file.
-- **Confirmation that `contact@anoglobalholdings.com` receives mail.**
+- **Confirmation that `info@anoglobalholdings.com` receives mail.**
 - **Analytics.** Google Analytics or Plausible, not yet added.
 
 ## Routing

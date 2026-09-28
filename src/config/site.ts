@@ -8,7 +8,7 @@ export const SITE = {
   name: 'Ano Global Holdings',
   domain: 'anoglobalholdings.com',
   url: 'https://anoglobalholdings.com',
-  email: 'contact@anoglobalholdings.com',
+  email: 'info@anoglobalholdings.com',
   locations: 'New York · Hong Kong · Lagos',
   founder: 'E.J. Anosike',
   founderRole: 'Founder & Chief Executive Officer',

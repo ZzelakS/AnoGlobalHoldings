@@ -210,7 +210,7 @@ export const STRUCTURE = {
 export const CONTACT = {
   title: 'Contact',
   org: 'Ano Global Holdings',
-  email: 'contact@anoglobalholdings.com',
+  email: 'info@anoglobalholdings.com',
   locations: 'New York · Hong Kong · Lagos',
   intro: 'Enquiries sent here are read and routed. If you already know which part of the group you need, the operating sites are below.',
   energyHeading: 'Energy and mobility',
