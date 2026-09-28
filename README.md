@@ -153,6 +153,6 @@ plain typographic section is used rather than stock or a placeholder.
 
 ## Routing
 
-Outbound links to `anoenergy.com` and `anocaresfoundation.org` open in the
+Outbound links to `anoenergy.org` and `anocaresfoundation.org` open in the
 **same tab**, per brief section 10. They appear on the home page, Our Companies,
 Contact, and in the footer.

@@ -23,9 +23,9 @@ export const COMPANIES = {
   energy: {
     name: 'Ano Energy',
     legal: 'Ano Energy Africa Limited',
-    href: 'https://anoenergy.com',
-    label: 'anoenergy.com',
-    cta: 'Visit anoenergy.com',
+    href: 'https://anoenergy.org',
+    label: 'anoenergy.org',
+    cta: 'Visit anoenergy.org',
   },
   foundation: {
     name: 'Anosike Cares Foundation',
